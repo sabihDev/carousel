@@ -29,9 +29,7 @@ body {
 }
 
 .container .carousel-container .content {
-  position: relative;
-  transform-style: preserve-3d;
-  animation: slide 0.4s linear;
+  animation: slideContent 0.2s linear 0.4 backwards;
 }
 
 @keyframes slide{
@@ -46,7 +44,9 @@ body {
   width: 35vw;
   aspect-ratio: 1;
   background-size: cover;
-  animation: slideContent 0.2s linear 0.4s backwards;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: slide 0.4s linear;
 }
 
 @keyframes slideContent {
