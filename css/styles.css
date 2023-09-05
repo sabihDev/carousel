@@ -29,7 +29,7 @@ body {
 }
 
 .container .carousel-container .content {
-  animation: slideContent 0.2s linear 0.4 backwards;
+  animation: slideContent 0.2s linear 0.8 backwards;
 }
 
 @keyframes slide{
@@ -46,7 +46,7 @@ body {
   background-size: cover;
   position: relative;
   transform-style: preserve-3d;
-  animation: slide 0.4s linear;
+  animation: slide 0.9s linear;
 }
 
 @keyframes slideContent {
