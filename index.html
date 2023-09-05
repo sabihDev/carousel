@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carousel</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/script.js" defer></script>
   </head>
   <body>
-    <h1>Carousel App</h1>
+    <div class="container">
+      <div class="carousel-container active">
+        <div class="content">
+            <img class="image" src="images/babar-azam.jpg" alt="">
+        </div>
+      </div>
+      <div class="carousel-container">
+        <div class="content">
+            <img class="image" src="images/joe-root.jpg" alt="">
+        </div>
+      </div>
+      <div class="carousel-container">
+        <div class="content">
+            <img class="image" src="images/ben-stokes.webp" alt="">
+        </div>
+      </div>
+
+      <div id="prev" class="fas fa-chevron-left"></div>
+      <div id="next" class="fas fa-chevron-right"></div>
+    </div>
   </body>
 </html>
