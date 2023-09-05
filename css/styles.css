@@ -1,0 +1,17 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    line-height: 1.7;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
