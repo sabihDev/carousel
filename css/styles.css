@@ -16,44 +16,21 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   background: darkcyan;
   line-height: 1.7;
   letter-spacing: 1px;
   font-family: sans-serif;
 }
 
-.carousel-container {
+.carousel{
   width: 100%;
-  overflow: hidden;
+}
+
+.carousel-container{
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
   position: relative;
 }
-
-.carousel-slide {
-  float: left;
-  width: 100%;
-  display: none;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-}
-
-#prevBtn, #nextBtn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-#prevBtn {
-  float: left;
-}
-
-#nextBtn {
-  float: right;
-}
-
