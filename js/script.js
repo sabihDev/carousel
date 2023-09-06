@@ -1,22 +1,33 @@
 import { AddClickListener } from './Reuseables.js';
 
-const nextButton = document.querySelector('#next');
-const prevButton = document.querySelector('#prev');
+let slideIndex = 0;
 
-let images = document.querySelectorAll('.carousel-container');
-let index = 0;
+function showSlide(n) {
+  const slides = document.getElementsByClassName("carousel-slide");
+  
+  if (n >= slides.length) {
+    slideIndex = 0;
+  }
+  if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
 
-AddClickListener(nextButton,next);
-AddClickListener(prevButton,prev)
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
 
-function next() {
-    images[index].classList.remove('active');
-    index = (index + 1) % images.length;
-    images[index].classList.add('active');
+  slides[slideIndex].style.display = "block";
 }
 
-function prev() {
-    images[index].classList.remove('active');
-    index = (index - 1 + images.length) % images.length;
-    images[index].classList.add('active');
+function prevSlide() {
+  showSlide(slideIndex -= 1);
 }
+
+function nextSlide() {
+  showSlide(slideIndex += 1);
+}
+
+showSlide(slideIndex);
+
+document.getElementById("prevBtn").addEventListener("click", prevSlide);
+document.getElementById("nextBtn").addEventListener("click", nextSlide);
