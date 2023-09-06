@@ -99,7 +99,6 @@ body {
   font-size: 30px;
   margin: 0 50px;
   padding: 0 12px;
-  text-transform: capitalize;
 }
 
 .carousel-controls-button{
@@ -113,6 +112,8 @@ body {
   background: transparent;
   outline: 0;
   border: none;
+  text-transform: capitalize;
+
 }
 
 .carousel-controls-previous::before{
@@ -137,10 +138,11 @@ body {
 
 .carousel-controls-next{
   position: relative;
-  margin-left: 2rem;
+  margin-left: 4rem;
   background: transparent;
   outline: 0;
   border: none;
+  text-transform: capitalize;
 }
 
 .carousel-controls-next::before{
@@ -152,8 +154,8 @@ body {
   padding: 10px;
   position: absolute;
   right: -30px;
-  top: 45%;
-  transform: rotate(-45deg) translateY(-50%);
+  top: 50%;
+  transform: rotate(-45deg) translateY(-40%);
   transition: right 0.15s ease-in-out;
   width: 5px;
 }

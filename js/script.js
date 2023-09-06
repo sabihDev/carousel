@@ -1,5 +1,5 @@
 const carouselContainer = document.querySelector(".carousel-container");
-const carouselControlsContainer = document.querySelector(".carousel-controls"); // Changed let to const
+const carouselControlsContainer = document.querySelector(".carousel-controls");
 const carouselControls = ['previous', 'next'];
 const carouselItems = document.querySelectorAll('.carousel-item');
 
@@ -10,7 +10,7 @@ class Carousel {
         this.carouselArray = [...items];
     }
 
-    UpdateCarousel() { // Changed method name to use camelCase
+    UpdateCarousel() {
         this.carouselArray.forEach(el => {
             el.classList.remove("carousel-item-1");
             el.classList.remove("carousel-item-2");
@@ -24,30 +24,29 @@ class Carousel {
         });
     }
 
-    setCurrentState(direction) { // Changed method name to use camelCase
+    setCurrentState(direction) {
         if (direction.className == 'carousel-controls-previous') {
             this.carouselArray.unshift(this.carouselArray.pop());
         } else {
             this.carouselArray.push(this.carouselArray.shift());
         }
-        this.UpdateCarousel(); // Changed method name to use camelCase
+        this.UpdateCarousel();
     }
 
-    SetControls() { // Changed method name to use camelCase
+    SetControls() {
         this.galleryControls.forEach(control => {
-            const createButton = document.createElement('button'); // Fixed the assignment
+            const createButton = document.createElement('button');
             createButton.className = `carousel-controls-${control}`;
-            carouselControlsContainer.appendChild(createButton); // Used appendChild to add the button
-            createButton.innerText = control; // Set the button text
+            carouselControlsContainer.appendChild(createButton);
+            createButton.innerText = control;
         });
     }
 
-    UseControls() { // Changed method name to use camelCase
+    UseControls() {
         const triggers = [...carouselControlsContainer.childNodes];
         triggers.forEach(control => {
             control.addEventListener('click', e => {
                 e.preventDefault();
-                // e.style.display = 'block'; // This line is not needed
                 this.setCurrentState(control);
             });
         });
