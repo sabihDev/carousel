@@ -104,22 +104,28 @@ body {
 
 .carousel-controls-button{
   outline: 0;
+  color: #555;
+  background-color: transparent;
 }
 
 .carousel-controls-previous{
   position: relative;
+  background: transparent;
+  outline: 0;
+  border: none;
 }
 
 .carousel-controls-previous::before{
   border: solid black;
   border-width: 0 5px 5px 0;
   content: '';
+
   display: inline-block;
   height: 5px;
   left: -30px;
   padding: 10px;
   position: absolute;
-  top: 25%;
+  top: 30%;
   transform: rotate(135deg) translateY(-50%);
   transition: left 0.15s ease-in-out;
   width: 5px;
@@ -131,6 +137,10 @@ body {
 
 .carousel-controls-next{
   position: relative;
+  margin-left: 2rem;
+  background: transparent;
+  outline: 0;
+  border: none;
 }
 
 .carousel-controls-next::before{
@@ -142,7 +152,7 @@ body {
   padding: 10px;
   position: absolute;
   right: -30px;
-  top: 25%;
+  top: 45%;
   transform: rotate(-45deg) translateY(-50%);
   transition: right 0.15s ease-in-out;
   width: 5px;
@@ -163,7 +173,7 @@ body {
 }
 
 .carousel-nav li{
-  background: white;
+  background: #555;
   border-radius: 50%;
   height: 10px;
   margin: 0 16px;
